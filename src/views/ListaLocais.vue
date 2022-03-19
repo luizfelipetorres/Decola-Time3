@@ -71,11 +71,16 @@ export default {
             .then(json => {
                 this.listaGeral = json
                 //console.log(this.listaGeral)
-                this.listaGeral.forEach(element => {
+                /* this.listaGeral.forEach(element => {
                     if (this.listaLocais.indexOf(element.local.id) == -1){
                         this.listaLocais.push(element.local.id)
                     }
-                })
+                }) */
+                for (let index = 0; index < this.listaGeral.lenght; index++) {
+                    if (this.listaLocais.indexOf(this.listaGeral[index].local) == -1){
+                        this.listaLocais.push(this.listaGeral[index].local)
+                    }
+                }
                 console.log(this.listaLocais)
             })
     },
