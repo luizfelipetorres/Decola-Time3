@@ -6,7 +6,20 @@
 
 <script>
 export default {
-    name: 'ListaLocais'
+    name: 'ListaLocais',
+    data(){
+        return {
+            listaGeral: []
+        }
+    },
+    created(){
+        fetch('https://it3-hbn-default-rtdb.firebaseio.com/ovosPascoa.json')
+            .then(resposta => resposta.json())
+            .then(json => {
+                this.listaGeral = json
+                console.log(this.listaGeral)
+            })
+    },
 }
 </script>
 
