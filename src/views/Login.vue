@@ -1,40 +1,48 @@
 <template>
-  <validation-observer ref="observer">
-    <div class="container">
-      <h1>Faça seu Cadastro</h1>
-      <form @submit.prevent="submit">
-        <validation-provider name="Name" rules="required|max:10">
-          <v-text-field
-            v-model="name"
-            :counter="30"
-            label="Name"
-            required
-          ></v-text-field>
-        </validation-provider>
+  <form class="container">
+    <h2>Cadastro 📝</h2>
+    <v-text-field
+      v-model="name"
+      :error-messages="nameErrors"
+      :counter="30"
+      label="Nome"
+      required
+      @input="$v.name.$touch()"
+      @blur="$v.name.$touch()"
+    ></v-text-field>
+      <v-text-field
+      v-model="password"
+      :error-messages="nameErrors"
+      :counter="15"
+      label="Senha"
+      required
+      @input="$v.name.$touch()"
+      @blur="$v.name.$touch()"
+    ></v-text-field>
+    <v-text-field
+      v-model="email"
+      :error-messages="emailErrors"
+      label="E-mail"
+      required
+      @input="$v.email.$touch()"
+      @blur="$v.email.$touch()"
+    ></v-text-field>
+    <v-checkbox
+      v-model="checkbox"
+      :error-messages="checkboxErrors"
+      label="Você aceita os termos de uso?"
+      required
+      @change="$v.checkbox.$touch()"
+      @blur="$v.checkbox.$touch()"
+    ></v-checkbox>
 
-        <validation-provider name="Senha" rules="required|max:6">
-          <v-text-field
-            v-model="senha"
-            :counter="8"
-            label="Senha"
-            required
-          ></v-text-field>
-        </validation-provider>
-
-        <validation-provider name="email" rules="required|email">
-          <v-text-field
-            v-model="email"
-            label="E-mail"
-            requiredname="email"
-            autocomplete="on"
-            required
-          ></v-text-field>
-        </validation-provider>
-
-        <v-btn class="mr-4" type="submit"> enviar </v-btn>
-      </form>
-    </div>
-  </validation-observer>
+    <v-btn
+      class="mr-4"
+      @click="submit"
+    >
+      confirmar
+    </v-btn>    
+  </form>
 </template>
 
 <script>
@@ -44,7 +52,7 @@ export default {
     name: "",
     email: "",
   }),
-
+  
   methods: {
     submit() {
       this.$refs.observer.validate();
@@ -54,14 +62,14 @@ export default {
 </script>
 
 <style scoped>
-h1 {
+h2 {
   margin-bottom: 20px;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
 .container {
   padding: 30px;
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(180deg, #194b79, #19236f, #7ea4c9);
+  background-image: linear-gradient(180deg, #ffffff, #5458d1, #02008b);
 }
 </style>
