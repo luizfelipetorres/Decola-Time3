@@ -16,11 +16,11 @@
 
             </div>
             <v-card-title>
-            {{ item.local.nome }}
+            {{ nomeLocais[index] }}
             </v-card-title>
 
             <v-card-subtitle>
-            {{ item.local.endereco }}
+            {{ enderecoLocais[index] }}
             </v-card-subtitle>
 
             <v-card-actions>
@@ -62,6 +62,9 @@ export default {
         return {
             listaGeral: [],
             listaLocais: [],
+            nomeLocais: [],
+            enderecoLocais: [],
+            cepLocais: [],
             show: false,
         }
     },
@@ -74,9 +77,15 @@ export default {
                 this.listaGeral.forEach(element => {
                     if (this.listaLocais.indexOf(element.local.id) == -1){
                         this.listaLocais.push(element.local.id)
+                        this.nomeLocais.push(element.local.nome)
+                        this.enderecoLocais.push(element.local.endereco)
+                        this.cepLocais.push(element.local.cep)
                     }
                 }) 
                 console.log(this.listaLocais)
+                console.log(this.nomeLocais)
+                console.log(this.enderecoLocais)
+                console.log(this.cepLocais)
             })
     },
 }
