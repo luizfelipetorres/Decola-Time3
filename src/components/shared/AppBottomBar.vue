@@ -1,8 +1,4 @@
 <template>
-<<<<<<< HEAD
-
-=======
->>>>>>> 0dbeaa9a6689301934b5fe511b4c94ae2a8c3cbe
   <v-bottom-navigation :value="value" color="primary" horizontal >
     <v-btn>
       <span>Recents</span>
