@@ -1,15 +1,16 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import PagHome from '../views/PagHome.vue'
 import Login from '../views/Login'
+
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
-    name: 'home',
-    component: HomeView
+    path: '/Home',
+    name: 'PagHome',
+    component: PagHome
   },
   {
     path: '/login',
