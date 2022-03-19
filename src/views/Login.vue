@@ -56,12 +56,12 @@ export default {
 <style scoped>
 h1 {
   margin-bottom: 20px;
+  color: rgb(255, 255, 255);
 }
 .container {
   padding: 30px;
   width: 100%;
   height: 100vh;
-  color: rgb(248, 248, 248);
   background-image: linear-gradient(180deg, #194b79, #19236f, #7ea4c9);
 }
 </style>
