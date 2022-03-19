@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-container class="banner">
-        <h1 class="text-h4 font-weight-thin mb-4">
+        <h1 class="text-h4 font-weight-bold mb-4 ">
           Pascolândia 
                  <v-icon> mdi-rabbit
                   </v-icon>
@@ -11,10 +11,10 @@
           Venda e compra de ovos de páscoa 
         </h4>
       <v-btn class="button" elevation="5"  m-b="0px" plain raised>
-        Encontre um vendedor 
+        Compra
         </v-btn>
       <v-btn class="button" elevation="5" m-b="0px"  plain raised>
-        Seja um vendedor 
+        Venda
       </v-btn>
   </v-container>
 
@@ -46,13 +46,13 @@
       <v-expansion-panel>
         <v-expansion-panel-header>Como vender</v-expansion-panel-header>
         <v-expansion-panel-content>
-          Some content
+          Faça o seu cadastro e monte a sua loja online 
         </v-expansion-panel-content>
       </v-expansion-panel>
       <v-expansion-panel>
         <v-expansion-panel-header>Quem somos nós</v-expansion-panel-header>
         <v-expansion-panel-content>
-          Some content
+          Somos um market place de ovos de páscoa, ajudamos compradores a encontrar vendores.Comece agora mesmo, navegue pela nossa lista de produtos ou cadastre a sua loja.
         </v-expansion-panel-content>
       </v-expansion-panel>
     </v-expansion-panels>
@@ -92,6 +92,7 @@
 .banner{
   height: 200px;
   text-align: center;
+  background-image: linear-gradient(to right, rgb(100, 240, 245) , rgb(89, 168, 204)); ;
 }
 
 .button{
@@ -105,5 +106,8 @@
 
 }
 
+.text-h4 {
+  font-weight: bold;
+}
 
 </style>
