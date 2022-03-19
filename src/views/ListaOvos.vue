@@ -31,14 +31,18 @@
                 <v-card-actions>
                     
                 <v-card-text>
-                    <div class=" text-display-1 blue--text font-weight-medium">
+                    <div class=" text-display-1 purple--text font-weight-medium">
                         R$ {{ovo.preco}}
                     </div>
                 </v-card-text>
                     <v-btn
-                        color="orange"
+                        color="deep-purple"
+                        class="pa-4 mr-2"
                         text
                         @click="comprar"
+                        outlined
+                        rounded
+                        small
                     >
                     <v-icon>mdi-cart</v-icon>
                     Comprar
