@@ -10,11 +10,9 @@
         <h4 class="subheading" heigth>
           Venda e compra de ovos de páscoa 
         </h4>
-      <v-btn class="button" elevation="5"  m-b="0px" plain raised>
-        Compra
-        </v-btn>
-      <v-btn class="button" elevation="5" m-b="0px"  plain raised>
-        Venda
+
+      <v-btn class="button" elevation="5" m-b="0px"  plain raised to='/login'>
+        Seja um vendedor 
       </v-btn>
   </v-container>
 
@@ -52,7 +50,7 @@
       <v-expansion-panel>
         <v-expansion-panel-header>Quem somos nós</v-expansion-panel-header>
         <v-expansion-panel-content>
-          Somos um market place de ovos de páscoa, ajudamos compradores a encontrar vendores.Comece agora mesmo, navegue pela nossa lista de produtos ou cadastre a sua loja.
+          Somos um market place de ovos de páscoa, ajudamos compradores e vendedores.
         </v-expansion-panel-content>
       </v-expansion-panel>
     </v-expansion-panels>
@@ -90,23 +88,25 @@
 <style>
 
 .banner{
-  height: 200px;
+  height: 150px;
   text-align: center;
-  background-image: linear-gradient(to right, rgb(100, 240, 245) , rgb(89, 168, 204)); ;
-}
+  background-image: linear-gradient(180deg, #ffffff, #8a8dcc, #4f4db9);
+};
 
 .button{
-  margin-bottom: 10px;
+  margin-right: 2px;
   height: 10px;
   border-radius: 10px;
-}
+  font-weight: bold;
+  text-decoration: none;
+};
 
 .subheading{
-  margin-bottom: 3px;
+  margin-bottom: 5px;
 
-}
+};
 
-.text-h4 {
+.text-h4{
   font-weight: bold;
 }
 
