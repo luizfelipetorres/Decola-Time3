@@ -52,7 +52,7 @@
     <!--EXPANSION!--> 
 
 
-    <div class="todo">
+  </div>
 </template>
 
 <script>
