@@ -19,6 +19,7 @@
                 to='/listalocais'>
                 <span>Localize</span>
 
+                <v-icon>mdi-map-marker</v-icon>
                 </v-btn>
             
         </v-bottom-navigation>
