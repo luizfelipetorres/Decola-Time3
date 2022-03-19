@@ -1,14 +1,5 @@
 <template>
-<<<<<<< HEAD
-  <v-bottom-navigation :value="value" color="primary" horizontal >
-    <v-btn>
-      <span>Recents</span></v-btn>
-
-    <div class="bottom-bar" position:fixed>
-        <v-bottom-navigation :value="value" appcolor="primary" horizontal fixed>
-=======
-        <v-bottom-navigation :value="value" appcolor="primary" horizontal fixed class = "bottom-bar">
->>>>>>> 509fa3014d708b6a9002e4ad280b7dc870cfae18
+        <v-bottom-navigation :value="value" app appcolor="primary" horizontal fixed class = "bottom-bar">
             
                 <v-btn 
                 to = "/Home">
