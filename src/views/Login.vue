@@ -7,8 +7,6 @@
       :counter="30"
       label="Nome"
       required
-      @input="$v.name.$touch()"
-      @blur="$v.name.$touch()"
     ></v-text-field>
       <v-text-field
       v-model="password"
@@ -16,29 +14,23 @@
       :counter="15"
       label="Senha"
       required
-      @input="$v.name.$touch()"
-      @blur="$v.name.$touch()"
     ></v-text-field>
     <v-text-field
       v-model="email"
       :error-messages="emailErrors"
       label="E-mail"
       required
-      @input="$v.email.$touch()"
-      @blur="$v.email.$touch()"
     ></v-text-field>
     <v-checkbox
       v-model="checkbox"
       :error-messages="checkboxErrors"
       label="Você aceita os termos de uso?"
       required
-      @change="$v.checkbox.$touch()"
-      @blur="$v.checkbox.$touch()"
     ></v-checkbox>
 
     <v-btn
       class="mr-4"
-      @click="submit"
+      @click="confirmar"
     >
       confirmar
     </v-btn>    

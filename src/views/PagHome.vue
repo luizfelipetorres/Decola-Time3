@@ -1,20 +1,20 @@
 <template>
   <v-app>
-    <v-container class="banner">
-        <h1 class="text-h4 font-weight-bold mb-4 ">
+    <div class="banner" min-width="100%">
+        <h1 class="text-h4 font-weight-bold mb-4 mt-5 ">
           Pascolândia 
                  <v-icon> mdi-rabbit
                   </v-icon>
         </h1>
  
-        <h4 class="subheading" heigth>
+        <h4 class="subheading"  mb-4>
           Venda e compra de ovos de páscoa 
         </h4>
 
       <v-btn class="button" elevation="5" m-b="0px"  plain raised to='/login'>
         Seja um vendedor 
       </v-btn>
-  </v-container>
+  </div>
 
     <v-carousel class="slide">
       <v-carousel-item
@@ -89,8 +89,10 @@
 
 .banner{
   height: 150px;
+  width: 100%;
   text-align: center;
   background-image: linear-gradient(180deg, #ffffff, #8a8dcc, #4f4db9);
+  
 };
 
 .button{

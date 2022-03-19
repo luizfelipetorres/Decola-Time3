@@ -42,7 +42,7 @@
 .bottom-bar a{
    
     text-decoration: none;
-   
+
 }
 
 </style>

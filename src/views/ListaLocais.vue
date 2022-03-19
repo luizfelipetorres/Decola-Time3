@@ -55,13 +55,12 @@ export default {
             show: [],
         }
     },
-    created(){
+   created(){
         fetch('https://it3-hbn-default-rtdb.firebaseio.com/ovosPascoa.json')
             .then(resposta => resposta.json())
             .then(json => {
                 this.listaGeral = json
                 console.log(this.listaGeral)
-
                 this.listaGeral.forEach(element => {
                     if (this.listaLocais.indexOf(element.local.id) == -1){
                         this.listaLocais.push(element.local.id)
@@ -71,13 +70,6 @@ export default {
                         /* this.show.push(false) */
                     }
                 }) 
-
-                /* console.log(this.listaLocais)
-                console.log(this.nomeLocais)
-                console.log(this.enderecoLocais)
-                console.log(this.cepLocais)
-                console.log(this.show) */
-                
             })
     },
 }
