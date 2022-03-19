@@ -1,5 +1,6 @@
 <template>
   <v-container fluid>
+    <h1>Lista de Ovos de Páscoa</h1>
     <v-row dense>
         <v-col
             v-for="ovo in listaGeral"
@@ -16,9 +17,11 @@
                 gradient="to top right, rgba(19,84,122,.2), rgba(128,208,199,.1)"
                 />
 
- 
             
-                <v-card-title class="pb-0">{{ovo.nome}}</v-card-title>
+                <v-card-title class="pb-3">{{ovo.nome}}</v-card-title>
+                <v-card-subtitle class="deep-purple--text">
+                    <v-icon small>mdi-map-marker</v-icon> {{ovo.local.nome}}
+                </v-card-subtitle>
 
                 <v-card-text>
                     <div class="mx-0 text-subtitle-1">
