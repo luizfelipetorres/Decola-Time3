@@ -1,8 +1,9 @@
 <template>
-  <v-app>
+  <v-app class="barras-iniciais">
+    <AppTopBar/>
     
     <v-main>
-      <AppTopBar/>
+      
       <router-view></router-view>
       
     </v-main>
@@ -25,6 +26,6 @@ export default {
 </script>
 
 
-<style lang="scss">
-
+<style scoped>
+  
 </style>

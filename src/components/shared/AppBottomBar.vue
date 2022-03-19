@@ -1,24 +1,35 @@
 <template>
-<div class="bottom-bar"></div>
-  <v-bottom-navigation :value="value" color="primary" horizontal >
-    <v-btn>
-      <span>Recents</span>
 
-      <v-icon>mdi-history</v-icon>
-    </v-btn>
+    <div class="bottom-bar" position:fixed>
+        <v-bottom-navigation :value="value" appcolor="primary" horizontal fixed>
+            
+            <router-link to='/Home'> 
+                <v-btn mb-0 pb-0>
+                <span>Home</span>
 
-    <v-btn>
-      <span>Favorites</span>
+                <v-icon>mdi-home-heart</v-icon>
+                </v-btn>
+            </router-link>
 
-      <v-icon>mdi-heart</v-icon>
-    </v-btn>
+            <router-link to='/ovos'> 
+                <v-btn>
+                <span>Produtos</span>
 
-    <v-btn>
-      <span>Nearby</span>
+                <v-icon>mdi-egg-easter</v-icon>
+                </v-btn>
+            </router-link>
 
-      <v-icon>mdi-map-marker</v-icon>
-    </v-btn>
-  </v-bottom-navigation>
+            <router-link to='/listalocais'> 
+                <v-btn>
+                <span>Localize</span>
+
+                <v-icon>mdi-map-marker</v-icon>
+                </v-btn>
+            </router-link>
+            
+        </v-bottom-navigation>
+
+  </div>
 </template>
 
 
@@ -35,8 +46,10 @@
 
 <style scoped>
 
-.bottom-bar{
-    color: purple;
+.bottom-bar a{
+   
+    text-decoration: none;
+   
 }
 
 </style>
