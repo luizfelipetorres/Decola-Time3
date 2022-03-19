@@ -1,7 +1,34 @@
 <template>
-    <v-container>
-        <h1>Lista de Locais</h1>
-    </v-container>
+        <v-container>
+            <h1>Lista de Locais</h1>
+            <v-row
+                align="center"
+                justify="space-around"
+            >
+                <v-btn depressed>
+                Normal
+                </v-btn>
+                <v-btn
+                depressed
+                color="primary"
+                >
+                Primary
+                </v-btn>
+                <v-btn
+                depressed
+                color="error"
+                >
+                Error
+                </v-btn>
+                <v-btn
+                depressed
+                disabled
+                >
+                Disabled
+                </v-btn>
+            </v-row>
+        </v-container>
+
 </template>
 
 <script>
