@@ -1,58 +1,55 @@
 <template>
-<div class="todo">
-
-    <!--SLIDE!-->
-  <v-carousel>
-    <v-carousel-item
-      v-for="(item,i) in items"
-      :key="i"
-      :src="item.src"
-      reverse-transition="fade-transition"
-      transition="fade-transition"
-    ></v-carousel-item>
-  </v-carousel>
-   <!--SLIDE!-->
-
-   <!--EXPANSION!--> 
-<div>
-    <div class="d-flex">
-      <v-checkbox
-        v-model="readonly"
-        label="Readonly"
-      ></v-checkbox>
-    </div>
-
-    <v-expansion-panels
-      v-model="panel"
-      :readonly="readonly"
-      multiple
+  <v-app>
+    <v-parallax
+    dark
+    src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
+  >
+    <v-row
+      align="center"
+      justify="center"
     >
-      <v-expansion-panel>
-        <v-expansion-panel-header>Quem somos</v-expansion-panel-header>
-        <v-expansion-panel-content>
-          Some content
-        </v-expansion-panel-content>
-      </v-expansion-panel>
+      <v-col
+        class="text-center"
+        cols="12"
+      >
+        <h1 class="text-h4 font-weight-thin mb-4">
+          Pascolandia 
+                 <v-icon> mdi-rabbit
+                  </v-icon>
+        </h1>
+ 
+        <h4 class="subheading">
+          Venda e compra de ovos de páscoa 
+        </h4>
+      </v-col>
+    </v-row>
+  </v-parallax>
 
-      <v-expansion-panel>
-        <v-expansion-panel-header>Como comprar</v-expansion-panel-header>
-        <v-expansion-panel-content>
-          Some content
-        </v-expansion-panel-content>
-      </v-expansion-panel>
+    <v-carousel>
+      <v-carousel-item
+        v-for="(item,i) in items"
+        :key="i"
+        :src="item.src"
+        reverse-transition="fade-transition"
+        transition="fade-transition"
+      ></v-carousel-item>
+    </v-carousel>
 
-      <v-expansion-panel>
-        <v-expansion-panel-header>Como vender</v-expansion-panel-header>
+     <v-row justify="center">
+    <v-expansion-panels accordion>
+      <v-expansion-panel
+        v-for="(item,i) in 5"
+        :key="i"
+      >
+        <v-expansion-panel-header>Item</v-expansion-panel-header>
         <v-expansion-panel-content>
-          Some content
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </v-expansion-panel-content>
       </v-expansion-panel>
     </v-expansion-panels>
-  </div>
-    <!--EXPANSION!--> 
+  </v-row>
 
-
-  </div>
+  </v-app>
 </template>
 
 <script>
@@ -61,27 +58,20 @@
       return {
         items: [
           {
-            src: 'https://conteudo.solutudo.com.br/bauru/onde-ir-bauru/ovos-de-pascoa-bauru-compre-do-pequeno/',
-          },
-          {
             src: 'https://robertajungmann.com.br/wp-content/uploads/2020/04/Ovo-de-p%C3%A1scoa-artesanal-990x556.jpg',
           },
           {
-            src: 'https://i.em.com.br/O0AZJsZFYSIQnZDfk8Kicix0bJ8=/675x0/smart/imgsapp.em.com.br/app/noticia_127983242361/2020/04/08/1136818/20200408111018566499a.jpg',
+            src: 'https://static.clubedaanamariabraga.com.br/wp-content/uploads/2019/04/ovo-de-Pascoa-saudavel-1024x576.jpg',
           },
           {
             src: 'https://blog.pajaris.com.br/wp-content/uploads/2021/01/ovo-de-pascoa.jpg',
           },
         ],
-
-        panel: [0, 1],
-        readonly: false,
       }
     },
 
+    
   }
-
-
 </script>
 
 <style>
