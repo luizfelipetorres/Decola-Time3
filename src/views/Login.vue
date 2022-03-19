@@ -1,109 +1,68 @@
 <template>
-<b-row class="vh-100 vw-100 row-login">
-    <b-col sm="5" class="d-flex justify-content-center align-items-center left-login">
-      <div class="col-8">
-        <h2 class="text-center mb-5 title-login">Faça o login</h2>
+  <validation-observer ref="observer">
+    <div class="container">
+      <h1>Faça seu Cadastro</h1>
+      <form @submit.prevent="submit">
+        <validation-provider name="Name" rules="required|max:10">
+          <v-text-field
+            v-model="name"
+            :counter="30"
+            label="Name"
+            required
+          ></v-text-field>
+        </validation-provider>
 
-        <b-form>
-          <b-form-group
+        <validation-provider name="Senha" rules="required|max:6">
+          <v-text-field
+            v-model="senha"
+            :counter="8"
+            label="Senha"
+            required
+          ></v-text-field>
+        </validation-provider>
+
+        <validation-provider name="email" rules="required|email">
+          <v-text-field
+            v-model="email"
             label="E-mail"
-            label-for="email"
-            >
-              <b-form-input
-                id="email"
-                type="email"
-                placeholder="joaosilva@email.com"
-                autocomplete="off"
-                v-model.trim="$v.form.email.$model"
-                :state="getValidation('email')"
-              ></b-form-input>
-            </b-form-group>
+            requiredname="email"
+            autocomplete="on"
+            required
+          ></v-text-field>
+        </validation-provider>
 
-            <b-form-group
-              label-for="password"
-            >
-              <label class="d-flex justify-content-between">
-                Senha
-                <small><a href="#">Esqueceu sua senha?</a></small>
-              </label>
-
-              <b-form-input
-                id="password"
-                type="password"
-                placeholder="Digite sua senha"
-                v-model.trim="$v.form.password.$model"
-                :state="getValidation('password')"
-              ></b-form-input>
-            </b-form-group>
-
-            <b-button
-              type="button"
-              variant="primary"
-              block
-              @click="login">
-              <i class="fas fa-sign-in-alt"></i> Entrar
-            </b-button>
-
-            <hr>
-
-            <b-button
-              type="button"
-              variant="outline-secondary"
-              block
-              @click="register">
-              <i class="fas fa-user-plus"></i> Não tenho conta
-            </b-button>
-        </b-form>
-      </div>
-    </b-col>
-    <b-col sm="7" class="d-flex justify-content-center align-items-center">
-      <img src="" class="img-login" />
-    </b-col>
-  </b-row>
+        <v-btn class="mr-4" type="submit"> enviar </v-btn>
+      </form>
+    </div>
+  </validation-observer>
 </template>
 
 <script>
-
 export default {
   name: 'logiN',
-  data() {
-    return {
-      form: {
-        email: "",
-        password: ""
-      }
-    }
-  }
-}
+  data: () => ({
+    name: "",
+    email: "",
+  }),
+
+  methods: {
+    submit() {
+      this.$refs.observer.validate();
+    },
+  },
+};
 </script>
 
-<style>
-
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
+<style scoped>
+h1 {
+  margin-bottom: 20px;
 }
-
-.row-login {
-  margin-left: 0;
-}
-
-.left-login {
-  background-color: #F2F2F2;
-}
-
-.title-login {
-  font-weight: bold;
-}
-
-.img-login {
-  width: 600px;
-  height: 600px;
+.container {
+  padding: 30px;
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+  background-image: linear-gradient(180deg, #194b79, #19236f, #000204);
 }
 
 </style>
-
