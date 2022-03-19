@@ -1,5 +1,5 @@
 <template>
-        <v-bottom-navigation :value="value" appcolor="primary" horizontal fixed class = "bottom-bar">
+        <v-bottom-navigation app :value="value" appcolor="primary" horizontal fixed class = "bottom-bar">
             
                 <v-btn 
                 to = "/Home">
