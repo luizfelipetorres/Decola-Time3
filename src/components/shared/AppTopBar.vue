@@ -1,6 +1,6 @@
 <template>
 <div class="app-bar">
-    <v-app-bar app color="deep-purple" dark >
+    <v-app-bar app color="deep-purple" dark>
         <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
       <v-toolbar-title class="text left">Menu</v-toolbar-title>
     </v-app-bar>
@@ -14,7 +14,7 @@
         <router-link to='/Home'> 
           <v-list-item>
             <v-list-item-icon>
-              <v-icon>mdi-egg-easter</v-icon>
+              <v-icon>mdi-home-heart</v-icon>
             </v-list-item-icon>
             <v-list-item-title>Home</v-list-item-title>
           </v-list-item>
@@ -56,6 +56,7 @@ export default {
 
     .app-bar a{
         text-decoration: none;
+        
     }
 
 </style>
