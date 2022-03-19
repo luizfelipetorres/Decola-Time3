@@ -61,8 +61,7 @@ h1 {
   padding: 30px;
   width: 100%;
   height: 100vh;
-  color: #fff;
-  background-image: linear-gradient(180deg, #194b79, #19236f, #000204);
+  color: rgb(248, 248, 248);
+  background-image: linear-gradient(180deg, #194b79, #19236f, #7ea4c9);
 }
-
 </style>
