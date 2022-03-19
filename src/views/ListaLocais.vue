@@ -5,7 +5,7 @@
         <v-card
             class="mt-10"
             max-width="344"
-            v-for="item of listaGeral" :key="item.local.id"
+            v-for="(item, index) of listaLocais" :key="index"
         >
             <!-- <v-img
             src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
@@ -70,17 +70,14 @@ export default {
             .then(resposta => resposta.json())
             .then(json => {
                 this.listaGeral = json
-                //console.log(this.listaGeral)
-                /* this.listaGeral.forEach(element => {
+                console.log(this.listaGeral)
+
+                this.listaGeral.forEach(element => {
                     if (this.listaLocais.indexOf(element.local.id) == -1){
                         this.listaLocais.push(element.local.id)
                     }
-                }) */
-                for (let index = 0; index < this.listaGeral.lenght; index++) {
-                    if (this.listaLocais.indexOf(this.listaGeral[index].local) == -1){
-                        this.listaLocais.push(this.listaGeral[index].local)
-                    }
-                }
+                }) 
+
                 console.log(this.listaLocais)
             })
     },
