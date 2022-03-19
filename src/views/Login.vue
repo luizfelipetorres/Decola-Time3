@@ -1,5 +1,5 @@
 <template>
-  <form class="container">
+ <form class="container">
     <h2>Cadastro 📝</h2>
     <v-text-field
       v-model="name"
@@ -64,12 +64,12 @@ export default {
 <style scoped>
 h2 {
   margin-bottom: 20px;
-  color: rgb(0, 0, 0);
+  color: black;
 }
 .container {
   padding: 30px;
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(180deg, #ffffff, #5458d1, #02008b);
+  background-image: linear-gradient(180deg, #ffffff, #8a8dcc, #4f4db9);
 }
 </style>
