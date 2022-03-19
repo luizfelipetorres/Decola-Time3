@@ -1,5 +1,5 @@
 <template>
-    <v-container>
+    <v-container fluid>
         <h1>Lista de Locais</h1>
 
         <v-card
@@ -35,9 +35,9 @@
                 <v-divider></v-divider>
                 
                 
-                <v-card-text v-for="(ovo, index2) of listaGeral" :key="index2">
-                    <span :v-if="ovo.local.nome == nomeLocais[index]"> {{ ovo.sabores }}</span>
-                </v-card-text>
+                <div v-for="(ovo) of listaGeral" :key="ovo.nome">
+                    <v-card-subtitle class="my-0 py-1" v-if="ovo.local.nome === nomeLocais[index]"> {{ ovo.sabor }}</v-card-subtitle>
+                </div>
         </v-card>
     </v-container>
 </template>
@@ -76,5 +76,7 @@ export default {
 </script>
 
 <style>
-
+h1{
+    text-align: center;
+}
 </style>
