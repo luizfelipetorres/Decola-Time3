@@ -1,31 +1,24 @@
 <template>
   <v-app>
-    <v-parallax
-    dark
-    src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
-  >
-    <v-row
-      align="center"
-      justify="center"
-    >
-      <v-col
-        class="text-center"
-        cols="12"
-      >
+    <v-container class="banner">
         <h1 class="text-h4 font-weight-thin mb-4">
-          Pascolandia 
+          Pascolândia 
                  <v-icon> mdi-rabbit
                   </v-icon>
         </h1>
  
-        <h4 class="subheading">
+        <h4 class="subheading" heigth>
           Venda e compra de ovos de páscoa 
         </h4>
-      </v-col>
-    </v-row>
-  </v-parallax>
+      <v-btn class="button" elevation="5"  m-b="0px" plain raised>
+        Encontre um vendedor 
+        </v-btn>
+      <v-btn class="button" elevation="5" m-b="0px"  plain raised>
+        Seja um vendedor 
+      </v-btn>
+  </v-container>
 
-    <v-carousel>
+    <v-carousel class="slide">
       <v-carousel-item
         v-for="(item,i) in items"
         :key="i"
@@ -35,19 +28,36 @@
       ></v-carousel-item>
     </v-carousel>
 
-     <v-row justify="center">
-    <v-expansion-panels accordion>
-      <v-expansion-panel
-        v-for="(item,i) in 5"
-        :key="i"
-      >
-        <v-expansion-panel-header>Item</v-expansion-panel-header>
+  <div>
+
+
+    <v-expansion-panels
+      v-model="panel"
+      :readonly="readonly"
+      multiple
+    >
+      <v-expansion-panel>
+        <v-expansion-panel-header>Como comprar</v-expansion-panel-header>
         <v-expansion-panel-content>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Navegue pela nossa página de produtos, adicione ao seu carrinho e selecione a forma de entrega
+        </v-expansion-panel-content>
+      </v-expansion-panel>
+
+      <v-expansion-panel>
+        <v-expansion-panel-header>Como vender</v-expansion-panel-header>
+        <v-expansion-panel-content>
+          Some content
+        </v-expansion-panel-content>
+      </v-expansion-panel>
+      <v-expansion-panel>
+        <v-expansion-panel-header>Quem somos nós</v-expansion-panel-header>
+        <v-expansion-panel-content>
+          Some content
         </v-expansion-panel-content>
       </v-expansion-panel>
     </v-expansion-panels>
-  </v-row>
+  </div>
+
 
   </v-app>
 </template>
@@ -56,12 +66,15 @@
   export default {
     data () {
       return {
+      panel: [0, 1],
+      readonly: false,
+
         items: [
           {
             src: 'https://robertajungmann.com.br/wp-content/uploads/2020/04/Ovo-de-p%C3%A1scoa-artesanal-990x556.jpg',
           },
           {
-            src: 'https://static.clubedaanamariabraga.com.br/wp-content/uploads/2019/04/ovo-de-Pascoa-saudavel-1024x576.jpg',
+            src: 'https://img.elo7.com.br/product/main/1DA4C41/ovo-de-pascoa-grande-artesanal-chocolate-tipo-belga-3-kg-ovo-de-chocolate-gigante.jpg',
           },
           {
             src: 'https://blog.pajaris.com.br/wp-content/uploads/2021/01/ovo-de-pascoa.jpg',
@@ -75,5 +88,22 @@
 </script>
 
 <style>
+
+.banner{
+  height: 200px;
+  text-align: center;
+}
+
+.button{
+  margin-bottom: 10px;
+  height: 10px;
+  border-radius: 10px;
+}
+
+.subheading{
+  margin-bottom: 3px;
+
+}
+
 
 </style>
