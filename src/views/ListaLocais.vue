@@ -11,7 +11,10 @@
             src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
             height="200px"
             ></v-img> -->
+            <div >
 
+
+            </div>
             <v-card-title>
             {{ item.local.nome }}
             </v-card-title>
@@ -67,11 +70,13 @@ export default {
             .then(resposta => resposta.json())
             .then(json => {
                 this.listaGeral = json
-                console.log(this.listaGeral)
+                //console.log(this.listaGeral)
                 this.listaGeral.forEach(element => {
-                    this.listaLocais.indexOf(element.local)
-                    
-                });
+                    if (this.listaLocais.indexOf(element.local.id) == -1){
+                        this.listaLocais.push(element.local.id)
+                    }
+                })
+                console.log(this.listaLocais)
             })
     },
 }

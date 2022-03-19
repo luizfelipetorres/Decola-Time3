@@ -1,5 +1,5 @@
 <template>
-<div class="bottom-bar"></div>
+
   <v-bottom-navigation :value="value" color="primary" horizontal >
     <v-btn>
       <span>Recents</span>
