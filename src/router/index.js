@@ -1,11 +1,17 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import PagHome from '../views/PagHome.vue'
 import Login from '../views/Login'
+
 
 Vue.use(VueRouter)
 
 const routes = [
-
+  {
+    path: '/Home',
+    name: 'PagHome',
+    component: PagHome
+  },
   {
     path: '/login',
     name: 'login',
